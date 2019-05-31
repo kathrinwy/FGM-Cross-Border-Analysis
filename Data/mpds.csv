@@ -1,0 +1,52 @@
+id,region,mpds,country
+EthiopiaTigray,Tigray,0.65,Ethiopia
+EthiopiaAfar,Afar,0.40,Ethiopia
+EthiopiaAmhara,Amhara,0.73,Ethiopia
+EthiopiaOromia,Oromia,0.49,Ethiopia
+EthiopiaSomali,Somali,0.10,Ethiopia
+EthiopiaBenishangul,Benishangul,0.57,Ethiopia
+EthiopiaSNNPR,SNNPR,0.65,Ethiopia
+EthiopiaGambela,Gambela,0.60,Ethiopia
+EthiopiaHarari,Harari,0.58,Ethiopia
+EthiopiaAddis Adaba,Addis Adaba,0.75,Ethiopia
+EthiopiaDire Dawa,Dire Dawa,0.59,Ethiopia
+TanzaniaWestern,Western,0.72,Tanzania
+TanzaniaNorthern,Northern,0.56,Tanzania
+TanzaniaCentral,Central,0.84,Tanzania
+TanzaniaSouthern Highlands,Southern Highlands,0.63,Tanzania
+TanzaniaSouthern,Southern,0.80,Tanzania
+TanzaniaSouth West Highlands,South West Highlands,0.59,Tanzania
+TanzaniaLake,Lake,0.42,Tanzania
+TanzaniaEastern,Eastern,0.77,Tanzania
+TanzaniaZanzibar,Zanzibar,0.27,Tanzania
+KenyaCoast,Coast,0.58,Kenya
+KenyaNorth Eastern,North Eastern,0.10,Kenya
+KenyaEastern,Eastern,0.77,Kenya
+KenyaCentral,Central,0.84,Kenya
+KenyaRift Valley,Rift Valley,0.62,Kenya
+KenyaWestern,Western,0.72,Kenya
+KenyaNyanza,Nyanza,0.67,Kenya
+KenyaNairobi,Nairobi,0.82,Kenya
+UgandaKampala,Kampala,0.57,Uganda
+UgandaCentral1,Central 1,0.60,Uganda
+UgandaCentral2,Central 2,0.59,Uganda
+UgandaBusoga,Busoga,0.42,Uganda
+UgandaBukedi,Bukedi,0.49,Uganda
+UgandaBugishu,Bugishu,0.60,Uganda
+UgandaTeso,Teso,0.43,Uganda
+UgandaKaramoja,Karamoja,0.24,Uganda
+UgandaLango,Lango,0.59,Uganda
+UgandaAcholi,Acholi,0.43,Uganda
+UgandaWest Nile,West Nile,0.29,Uganda
+UgandaBunyoro,Bunyoro,0.49,Uganda
+UgandaTooro,Tooro,0.54,Uganda
+UgandaAnkole,Ankole,0.55,Uganda
+UgandaKigezi,Kigezi,0.65,Uganda
+SomaliaMaroodijeex/Saaxil,Maroodijeex/Saaxil,0.41,Somalia
+SomaliaAwdal,Awdal,0.49,Somalia
+SomaliaTogdheer,Togdheer,0.40,Somalia
+SomaliaSool,Sool,0.35,Somalia
+SomaliaSanaag,Sanaag,0.43,Somalia
+SomaliaBari,Bari,0.40,Somalia
+SomaliaNugal,Nugal,0.42,Somalia
+SomaliaMudug,Mudug,0.33,Somalia

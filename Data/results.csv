@@ -1,0 +1,364 @@
+ID,Region,fgm,country
+BeninAlibori,Alibori,0.368080428,Benin
+BeninAtacora,Atacora,0.205405489,Benin
+BeninAtlantique,Atlantique,0.022228845,Benin
+BeninBorgou,Borgou,0.598513121,Benin
+BeninCollines,Collines,0.135918208,Benin
+BeninCouffo,Couffo,0,Benin
+BeninDonga,Donga,0.581403474,Benin
+BeninLittoral,Littoral,0.036704826,Benin
+BeninMono,Mono,0.010763113,Benin
+BeninOueme,Oueme,0.017439163,Benin
+BeninPlateau,Plateau,0.109323712,Benin
+BeninZou,Zou,0.004075946,Benin
+Burkina FasoBoucle du Mouhoun,Boucle du Mouhoun,0.700145817,Burkina Faso
+Burkina FasoCascades,Cascades,0.819013342,Burkina Faso
+Burkina FasoCentre,Centre,0.660201525,Burkina Faso
+Burkina FasoCentre-Est,Centre-Est,0.894567731,Burkina Faso
+Burkina FasoCentre-Nord,Centre-Nord,0.866390951,Burkina Faso
+Burkina FasoCentre-Ouest,Centre-Ouest,0.547790958,Burkina Faso
+Burkina FasoCentre-Sud,Centre-Sud,0.681932051,Burkina Faso
+Burkina FasoEst,Est,0.699497204,Burkina Faso
+Burkina FasoHauts-Bassins,Hauts-Bassins,0.819361745,Burkina Faso
+Burkina FasoNord,Nord,0.875575349,Burkina Faso
+Burkina FasoPlateau Central,Plateau Central,0.876556079,Burkina Faso
+Burkina FasoSahel,Sahel,0.781473133,Burkina Faso
+Burkina FasoSud-Ouest,Sud-Ouest,0.792489789,Burkina Faso
+Central African RepublicBamingui-Bangoran,Bamingui-Bangoran,0.800972968,Central African Republic
+Central African RepublicBangui,Bangui,0.186049622,Central African Republic
+Central African RepublicBasse-Kotto,Basse-Kotto,0.665218204,Central African Republic
+Central African RepublicHaute-Kotto,Haute-Kotto,0.693480415,Central African Republic
+Central African RepublicHaut-Mbomou,Haut-Mbomou,0.054114735,Central African Republic
+Central African RepublicKémo,Kémo,0.666058188,Central African Republic
+Central African RepublicLobaye,Lobaye,0.119432265,Central African Republic
+Central African RepublicMambéré-Kadéï,Mambéré-Kadéï,0.143151528,Central African Republic
+Central African RepublicMbomou,Mbomou,0.057435935,Central African Republic
+Central African RepublicNana-Gribizi,Nana-Gribizi,0.670688387,Central African Republic
+Central African RepublicNana-Mambéré,Nana-Mambéré,0.034273614,Central African Republic
+Central African RepublicOmbella M'Poko,Ombella M'Poko,0.321927059,Central African Republic
+Central African RepublicOuaka,Ouaka,0.764098436,Central African Republic
+Central African RepublicOuham,Ouham,0.351503956,Central African Republic
+Central African RepublicOuham Pendé,Ouham Pendé,0.027167238,Central African Republic
+Central African RepublicSangha-Mbaéré,Sangha-Mbaéré,0.057411825,Central African Republic
+Central African RepublicVakaga,Vakaga,0.621651937,Central African Republic
+ChadBarh El Gazal,Barh El Gazal,0.054770009,Chad
+ChadBatha,Batha,0.796427875,Chad
+ChadBorkou/Tibesti,Borkou/Tibesti,0.018769166,Chad
+ChadChari Baguirmi,Chari Baguirmi,0.424961283,Chad
+ChadEnnedi Est/Ennedi Ouest,Ennedi Est/Ennedi Ouest,0.123834493,Chad
+ChadGuéra,Guéra,0.90012339,Chad
+ChadHadjer-Lamis,Hadjer-Lamis,0.460404369,Chad
+ChadKanem,Kanem,0.006513558,Chad
+ChadLac,Lac,0.007017334,Chad
+ChadLogone Occidental,Logone Occidental,0.059639962,Chad
+ChadLogone Oriental,Logone Oriental,0.245256386,Chad
+ChadMandoul,Mandoul,0.828879915,Chad
+ChadMayo Kebbi Est,Mayo Kebbi Est,0.060307602,Chad
+ChadMayo Kebbi Ouest,Mayo Kebbi Ouest,0.025328349,Chad
+ChadMoyen Chari,Moyen Chari,0.534281747,Chad
+ChadN'Djaména,N'Djaména,0.376224628,Chad
+ChadOuaddaï,Ouaddaï,0.820200475,Chad
+ChadSalamat,Salamat,0.962341971,Chad
+ChadSila,Sila,0.937332505,Chad
+ChadTandjilé,Tandjilé,0.139806646,Chad
+ChadWadi Fira,Wadi Fira,0.514094303,Chad
+Cote d'IvoireAbidjan,Abidjan,0.356073142,Cote d'Ivoire
+Cote d'IvoireCentral,Central,0.207563235,Cote d'Ivoire
+Cote d'IvoireEast Central,East Central,0.284888431,Cote d'Ivoire
+Cote d'IvoireNorth,North,0.837277142,Cote d'Ivoire
+Cote d'IvoireNorth Central,North Central,0.537503908,Cote d'Ivoire
+Cote d'IvoireNortheast,Northeast,0.264524911,Cote d'Ivoire
+Cote d'IvoireNorthwest,Northwest,0.795847365,Cote d'Ivoire
+Cote d'IvoireSouth,South,0.344795654,Cote d'Ivoire
+Cote d'IvoireSouthwest,Southwest,0.442389203,Cote d'Ivoire
+Cote d'IvoireWest,West,0.645443336,Cote d'Ivoire
+Cote d'IvoireWest Central,West Central,0.40868306,Cote d'Ivoire
+EgyptAlexandria,Alexandria,0.792333543,Egypt
+EgyptAssuit,Assuit,0.936801804,Egypt
+EgyptAswan,Aswan,0.981055509,Egypt
+EgyptBehera,Behera,0.911407024,Egypt
+EgyptBeni Suef,Beni Suef,0.9766051,Egypt
+EgyptCairo,Cairo,0.834175084,Egypt
+EgyptDakahlia,Dakahlia,0.90513187,Egypt
+EgyptDamietta,Damietta,0.768801617,Egypt
+EgyptFayoum,Fayoum,0.938539903,Egypt
+EgyptGharbia,Gharbia,0.951513161,Egypt
+EgyptGiza,Giza,0.937611063,Egypt
+EgyptIsmailia,Ismailia,0.932830661,Egypt
+EgyptKafr El-Sheikh,Kafr El-Sheikh,0.962137267,Egypt
+EgyptKalyubia,Kalyubia,0.964494943,Egypt
+EgyptLuxor,Luxor,0.997323254,Egypt
+EgyptMatroh,Matroh,0.152730606,Egypt
+EgyptMenoufia,Menoufia,0.948697746,Egypt
+EgyptMenya,Menya,0.932436051,Egypt
+EgyptNew Valley,New Valley,0.974485955,Egypt
+EgyptPort Said,Port Said,0.7275,Egypt
+EgyptQena,Qena,0.990756646,Egypt
+EgyptRed Sea,Red Sea,0.892176284,Egypt
+EgyptSharkia,Sharkia,0.946729072,Egypt
+EgyptSouhag,Souhag,0.983979775,Egypt
+EgyptSuez,Suez,0.837234043,Egypt
+EritreaAnseba,Anseba,0.991,Eritrea
+EritreaDebub,Debub,0.979,Eritrea
+EritreaDebubawi Keih Bahri,Debubawi Keih Bahri,0.994,Eritrea
+EritreaGash-Barka,Gash-Barka,0.99,Eritrea
+EritreaMaekal,Maekal,0.981,Eritrea
+EritreaSemenawi Keih Bahri,Semenawi Keih Bahri,0.994,Eritrea
+EthiopiaAddis Abeba,Addis Abeba,0.53811486,Ethiopia
+EthiopiaAffar,Affar,0.910174096,Ethiopia
+EthiopiaAmhara,Amhara,0.615812901,Ethiopia
+EthiopiaBen-Gumz,Ben-Gumz,0.629066696,Ethiopia
+EthiopiaDire Dawa,Dire Dawa,0.751450392,Ethiopia
+EthiopiaGambela,Gambela,0.330351511,Ethiopia
+EthiopiaHarari,Harari,0.817354813,Ethiopia
+EthiopiaOromiya,Oromiya,0.74474425,Ethiopia
+EthiopiaSNNP,SNNP,0.619606334,Ethiopia
+EthiopiaSomali,Somali,0.981619341,Ethiopia
+EthiopiaTigray,Tigray,0.241186384,Ethiopia
+GhanaAshanti,Ashanti,0.037518059,Ghana
+GhanaBrong Ahafo,Brong Ahafo,0.10880945,Ghana
+GhanaCentral,Central,0.015957351,Ghana
+GhanaEastern,Eastern,0.036874069,Ghana
+GhanaGreater Accra,Greater Accra,0.03034968,Ghana
+GhanaNorthern,Northern,0.121489935,Ghana
+GhanaUpper East,Upper East,0.411367913,Ghana
+GhanaUpper West,Upper West,0.567582856,Ghana
+GhanaVolta,Volta,0.005390716,Ghana
+GhanaWestern,Western,0.026013434,Ghana
+GuineaBoke,Boke,1,Guinea
+GuineaConakry,Conakry,0.967806254,Guinea
+GuineaFaranah,Faranah,0.997075065,Guinea
+GuineaKankan,Kankan,0.993866189,Guinea
+GuineaKindia,Kindia,0.995937197,Guinea
+GuineaLabe,Labe,0.998218794,Guinea
+GuineaMamou,Mamou,0.996742332,Guinea
+GuineaNzerekore,Nzerekore,0.871064478,Guinea
+Guinea BissauBafata,Bafata,0.864789285,Guinea Bissau
+Guinea BissauBiombo,Biombo,0.0417054,Guinea Bissau
+Guinea BissauBissau,Bissau,0.345446082,Guinea Bissau
+Guinea BissauBolama/Bijagos,Bolama/Bijagos,0.200441005,Guinea Bissau
+Guinea BissauCacheu,Cacheu,0.174394509,Guinea Bissau
+Guinea BissauGabu,Gabu,0.973884619,Guinea Bissau
+Guinea BissauOio,Oio,0.466748692,Guinea Bissau
+Guinea BissauQuinara,Quinara,0.498094815,Guinea Bissau
+Guinea BissauTombali,Tombali,0.604356191,Guinea Bissau
+IraqAnbar,Anbar,0,Iraq
+IraqBabylon,Babylon,0.003,Iraq
+IraqBaghdad,Baghdad,0,Iraq
+IraqBasrah,Basrah,0,Iraq
+IraqDahuk,Dahuk,0.017,Iraq
+IraqDiyala,Diyala,0.002,Iraq
+IraqErbil,Erbil,0.575,Iraq
+IraqKerbala,Kerbala,0.002,Iraq
+IraqKirkuk,Kirkuk,0.199,Iraq
+IraqMissan,Missan,0,Iraq
+IraqMuthanna,Muthanna,0.003,Iraq
+IraqNajaf,Najaf,0.004,Iraq
+IraqNinewa,Ninewa,0,Iraq
+IraqQadissiya,Qadissiya,0.008,Iraq
+IraqSalah al-Din,Salah al-Din,0.016,Iraq
+IraqSulaymaniyah,Sulaymaniyah,0.543,Iraq
+IraqThi-Qar,Thi-Qar,0,Iraq
+IraqWassit,Wassit,0.003,Iraq
+KenyaCentral,Central,0.165,Kenya
+KenyaCoast,Coast,0.102,Kenya
+KenyaEastern,Eastern,0.264,Kenya
+KenyaNairobi,Nairobi,0.08,Kenya
+KenyaNorth Eastern,North Eastern,0.975,Kenya
+KenyaRift Valley,Rift Valley,0.269,Kenya
+KenyaNyanza,Nyanza,0.324,Kenya
+KenyaWestern,Western,0.08,Kenya
+LiberiaBomi,Bomi,0.647193637,Liberia
+LiberiaBong,Bong,0.779892953,Liberia
+LiberiaGbarpolu,Gbarpolu,0.699464202,Liberia
+LiberiaGrand Bassa,Grand Bassa,0.617137962,Liberia
+LiberiaGrand Cape Mount,Grand Cape Mount,0.687514263,Liberia
+LiberiaGrand Gedeh,Grand Gedeh,0.085071424,Liberia
+LiberiaGrand Kru,Grand Kru,0.038280833,Liberia
+LiberiaLofa,Lofa,0.74121537,Liberia
+LiberiaMargibi,Margibi,0.476557173,Liberia
+LiberiaMaryland,Maryland,0.018888438,Liberia
+LiberiaMontserrado,Montserrado,0.308611506,Liberia
+LiberiaNimba,Nimba,0.581180385,Liberia
+LiberiaRiver Cess,River Cess,0.308935784,Liberia
+LiberiaRiver Gee,River Gee,0.051047739,Liberia
+LiberiaSinoe,Sinoe,0.059149492,Liberia
+MaliBamako,Bamako,0.882431815,Mali
+MaliGao,Gao,0.004409511,Mali
+MaliKayes,Kayes,0.884442949,Mali
+MaliKoulikoro,Koulikoro,0.96775623,Mali
+MaliMopti,Mopti,0.74578183,Mali
+MaliSegou,Segou,0.840295941,Mali
+MaliSikasso,Sikasso,0.917353914,Mali
+MaliTombouctou,Tombouctou,0.329240906,Mali
+MauritaniaAdrar,Adrar,0.609380101,Mauritania
+MauritaniaAssaba,Assaba,0.978983432,Mauritania
+MauritaniaBrakna,Brakna,0.717238624,Mauritania
+MauritaniaDakhlet-Nouadhibou,Dakhlet-Nouadhibou,0.457156626,Mauritania
+MauritaniaGorgol,Gorgol,0.925713247,Mauritania
+MauritaniaGuidimakha,Guidimakha,0.988758661,Mauritania
+MauritaniaHodh Ech Chargi,Hodh Ech Chargi,0.950713077,Mauritania
+MauritaniaHodh El Gharbi,Hodh El Gharbi,0.959727469,Mauritania
+MauritaniaInchiri,Inchiri,0.135397759,Mauritania
+MauritaniaNouakchott,Nouakchott,0.547332189,Mauritania
+MauritaniaTagant,Tagant,0.881347382,Mauritania
+MauritaniaTiris-Zemmour,Tiris-Zemmour,0.411777633,Mauritania
+MauritaniaTrarza,Trarza,0.257424935,Mauritania
+NigerAgadez,Agadez,0.001930168,Niger
+NigerDiffa,Diffa,0.000756678,Niger
+NigerDosso,Dosso,0.001278384,Niger
+NigerMaradi,Maradi,0.002768261,Niger
+NigerNiamey,Niamey,0.018250596,Niger
+NigerTahoua,Tahoua,0.011300464,Niger
+NigerTillaberi,Tillaberi,0.092450764,Niger
+NigerZinder,Zinder,0.01577437,Niger
+NigeriaAbia,Abia,0.338436385,Nigeria
+NigeriaAdamawa,Adamawa,0.000918584,Nigeria
+NigeriaAkwa Ibom,Akwa Ibom,0.1075735,Nigeria
+NigeriaAnambra,Anambra,0.176623377,Nigeria
+NigeriaBauchi,Bauchi,0.000751417,Nigeria
+NigeriaBayelsa,Bayelsa,0.271485524,Nigeria
+NigeriaBenue,Benue,0.042382875,Nigeria
+NigeriaBorno,Borno,0.041763833,Nigeria
+NigeriaCross River,Cross River,0.240941209,Nigeria
+NigeriaDelta,Delta,0.353813075,Nigeria
+NigeriaEbonyi,Ebonyi,0.430624052,Nigeria
+NigeriaEdo,Edo,0.377828451,Nigeria
+NigeriaEkiti,Ekiti,0.676091917,Nigeria
+NigeriaEnugu,Enugu,0.21864759,Nigeria
+NigeriaFCT-Abuja,FCT-Abuja,0.069458685,Nigeria
+NigeriaGombe,Gombe,0,Nigeria
+NigeriaImo,Imo,0.555965449,Nigeria
+NigeriaJigawa,Jigawa,0.196656141,Nigeria
+NigeriaKaduna,Kaduna,0.396793121,Nigeria
+NigeriaKano,Kano,0.311517278,Nigeria
+NigeriaKatsina,Katsina,0.006115714,Nigeria
+NigeriaKebbi,Kebbi,0.000757335,Nigeria
+NigeriaKogi,Kogi,0.014965889,Nigeria
+NigeriaKwara,Kwara,0.54587186,Nigeria
+NigeriaLagos,Lagos,0.250187753,Nigeria
+NigeriaNasarawa,Nasarawa,0.150836249,Nigeria
+NigeriaNiger,Niger,0.005803629,Nigeria
+NigeriaOgun,Ogun,0.2038436,Nigeria
+NigeriaOndo,Ondo,0.448724623,Nigeria
+NigeriaOsun,Osun,0.715078691,Nigeria
+NigeriaOyo,Oyo,0.637082887,Nigeria
+NigeriaPlateau,Plateau,0.058835971,Nigeria
+NigeriaRivers,Rivers,0.15616293,Nigeria
+NigeriaSokoto,Sokoto,0.004395392,Nigeria
+NigeriaTaraba,Taraba,0.014116469,Nigeria
+NigeriaYobe,Yobe,0,Nigeria
+NigeriaZamfara,Zamfara,0.263939962,Nigeria
+SenegalDakar,Dakar,0.178201533,Senegal
+SenegalDiourbel,Diourbel,0.006459817,Senegal
+SenegalFatick,Fatick,0.075754103,Senegal
+SenegalKaffrine,Kaffrine,0.092956486,Senegal
+SenegalKaolack,Kaolack,0.092822169,Senegal
+SenegalKedougou,Kedougou,0.871031877,Senegal
+SenegalKolda,Kolda,0.636099439,Senegal
+SenegalLouga,Louga,0.044049055,Senegal
+SenegalMatam,Matam,0.73063713,Senegal
+SenegalSaint-Louis,Saint-Louis,0.354050351,Senegal
+SenegalSedhiou,Sedhiou,0.755423624,Senegal
+SenegalTambacounda,Tambacounda,0.698881921,Senegal
+SenegalThies,Thies,0.050760361,Senegal
+SenegalZiguinchor,Ziguinchor,0.681546534,Senegal
+Sierra LeoneBo,Bo,0.942344675,Sierra Leone
+Sierra LeoneBombali,Bombali,0.982098566,Sierra Leone
+Sierra LeoneBonthe,Bonthe,0.960326382,Sierra Leone
+Sierra LeoneKailahun,Kailahun,0.986134385,Sierra Leone
+Sierra LeoneKambia,Kambia,0.98281622,Sierra Leone
+Sierra LeoneKenema,Kenema,0.971984529,Sierra Leone
+Sierra LeoneKoinadugu,Koinadugu,0.9889402,Sierra Leone
+Sierra LeoneKono,Kono,0.972227493,Sierra Leone
+Sierra LeoneMoyamba,Moyamba,0.95505392,Sierra Leone
+Sierra LeonePort Loko,Port Loko,0.976161652,Sierra Leone
+Sierra LeonePujehun,Pujehun,0.973086081,Sierra Leone
+Sierra LeoneTonkolili,Tonkolili,0.990236206,Sierra Leone
+Sierra LeoneWestern Area Rural,Western Area Rural,0.917704469,Sierra Leone
+Sierra LeoneWestern Area Urban,Western Area Urban,0.902321017,Sierra Leone
+SomaliaAwdal,Awdal,0.994,Somalia
+SomaliaBari,Bari,0.977,Somalia
+SomaliaMudug,Mudug,0.988,Somalia
+SomaliaNugaal,Nugaal,0.974,Somalia
+SomaliaSanaag,Sanaag,0.997,Somalia
+SomaliaSool,Sool,0.993,Somalia
+SomaliaTogdheer,Togdheer,0.994,Somalia
+SomaliaWoqooyi Galbeed,Woqooyi Galbeed,0.987,Somalia
+SudanBlue Nile,Blue Nile,0.677391493,Sudan
+SudanCentral Darfur,Central Darfur,0.697576759,Sudan
+SudanEast Darfur,East Darfur,0.996116847,Sudan
+SudanEl Gazira,El Gazira,0.909803359,Sudan
+SudanGedaref,Gedaref,0.855912276,Sudan
+SudanKassala,Kassala,0.817552754,Sudan
+SudanKhartoum,Khartoum,0.942072318,Sudan
+SudanNorth Darfur,North Darfur,0.99058694,Sudan
+SudanNorth Kordofan,North Kordofan,0.996402522,Sudan
+SudanNorthern,Northern,0.987555132,Sudan
+SudanRed Sea,Red Sea,0.980239754,Sudan
+SudanRiver Nile,River Nile,0.995632698,Sudan
+SudanSennar,Sennar,0.852904512,Sudan
+SudanSouth Darfur,South Darfur,0.910326995,Sudan
+SudanSouth Kordofan,South Kordofan,0.945671256,Sudan
+SudanWest Darfur,West Darfur,0.615503478,Sudan
+SudanWest Kordofan,West Kordofan,0.939850064,Sudan
+SudanWhite Nile,White Nile,0.962755927,Sudan
+TanzaniaCentral,Central,0.456,Tanzania
+TanzaniaEastern,Eastern,0.056,Tanzania
+TanzaniaLake,Lake,0.054,Tanzania
+TanzaniaNorthern,Northern,0.217,Tanzania
+TanzaniaSouth West Highlands,South West Highlands,0.006,Tanzania
+TanzaniaSouthern,Southern,0.011,Tanzania
+TanzaniaSouthern Highlands,Southern Highlands,0.041,Tanzania
+TanzaniaWestern,Western,0.005,Tanzania
+The GambiaBanjul,Zanzibar,0.475194446,The Gambia
+The GambiaBasse,Basse,0.970594227,The Gambia
+The GambiaBrikama,Brikama,0.777778476,The Gambia
+The GambiaJanjanbureh,Janjanbureh,0.755068579,The Gambia
+The GambiaKanifing,Kanifing,0.698214395,The Gambia
+The GambiaKerewan,Kerewan,0.58492317,The Gambia
+The GambiaKuntaur,Kuntaur,0.573634801,The Gambia
+The GambiaMansakonko,Mansakonko,0.941258138,The Gambia
+TogoCentrale,Centrale,0.173561703,Togo
+TogoGreater Lomé area,Greater Lomé area,0.016476808,Togo
+TogoKara,Kara,0.079942568,Togo
+TogoMaritime (excluding Greater Lomé area),Maritime (excluding Greater Lomé area),0.003822987,Togo
+TogoPlateaux,Plateaux,0.018006444,Togo
+TogoSavanes,Savanes,0.100802891,Togo
+UgandaAcholi,Acholi,0,Uganda
+UgandaAnkole,Ankole,0,Uganda
+UgandaBugishu,Bugishu,0.026276275,Uganda
+UgandaBukedi,Bukedi,0.001685166,Uganda
+UgandaBunyoro,Bunyoro,0.000379926,Uganda
+UgandaBusoga,Busoga,0.001104613,Uganda
+UgandaCentral 1,Central 1,0,Uganda
+UgandaCentral 2,Central 2,0.001179922,Uganda
+UgandaKampala,Kampala,0.004726641,Uganda
+UgandaKaramoja,Karamoja,0.063645193,Uganda
+UgandaKigezi,Kigezi,0,Uganda
+UgandaLango,Lango,0,Uganda
+UgandaTeso,Teso,0.000726732,Uganda
+UgandaTooro,Tooro,0,Uganda
+UgandaWest Nile,West Nile,0,Uganda
+YemenAbyan,Abyan,0.051,Yemen
+YemenAden,Aden,0.145,Yemen
+YemenAl-Baidha,Al-Baidha,0,Yemen
+YemenAldhalae,Aldhalae,0.005,Yemen
+YemenAl-Hodiedah,Al-Hodiedah,0.623,Yemen
+YemenAl-Jawf,Al-Jawf,0.004,Yemen
+YemenAl-Mhrah,Al-Mhrah,0.847,Yemen
+YemenAl-Mhweit,Al-Mhweit,0.003,Yemen
+YemenAmran,Amran,0.014,Yemen
+YemenDhamar,Dhamar,0.135,Yemen
+YemenHadramout,Hadramout,0.799,Yemen
+YemenHajjah,Hajjah,0.077,Yemen
+YemenIbb,Ibb,0.062,Yemen
+YemenLahj,Lahj,0.039,Yemen
+YemenMareb,Mareb,0.073,Yemen
+YemenReimah,Reimah,0.215,Yemen
+YemenSadah,Sadah,0.03,Yemen
+YemenSanaa,Sanaa,0.008,Yemen
+YemenSanaa City,Sanaa City,0.048,Yemen
+YemenShabwah,Shabwah,0.006,Yemen
+YemenTaiz,Taiz,0.132,Yemen
+TanzaniaZanzibar,Zanzibar,0.001,Tanzania

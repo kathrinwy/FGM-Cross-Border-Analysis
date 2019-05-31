@@ -1,0 +1,52 @@
+id,region,sba,country
+EthiopiaTigray,Tigray,59.30%,Ethiopia
+EthiopiaAfar,Afar,16.40%,Ethiopia
+EthiopiaAmhara,Amhara,27.70%,Ethiopia
+EthiopiaOromia,Oromia,19.70%,Ethiopia
+EthiopiaSomali,Somali,20.00%,Ethiopia
+EthiopiaBenishangul,Benishangul,28.60%,Ethiopia
+EthiopiaSNNPR,SNNPR,28.60%,Ethiopia
+EthiopiaGambela,Gambela,46.90%,Ethiopia
+EthiopiaHarari,Harari,51.20%,Ethiopia
+EthiopiaAddis Adaba,Addis Adaba,96.80%,Ethiopia
+EthiopiaDire Dawa,Dire Dawa,56.70%,Ethiopia
+TanzaniaWestern,Western,47.80%,Tanzania
+TanzaniaNorthern,Northern,68.80%,Tanzania
+TanzaniaCentral,Central,89.70%,Tanzania
+TanzaniaSouthern Highlands,Southern Highlands,88.00%,Tanzania
+TanzaniaSouthern,Southern,81.30%,Tanzania
+TanzaniaSouth West Highlands,South West Highlands,62.60%,Tanzania
+TanzaniaLake,Lake,51.00%,Tanzania
+TanzaniaEastern,Eastern,63.30%,Tanzania
+TanzaniaZanzibar,Zanzibar,68.80%,Tanzania
+KenyaCoast,Coast,58.20%,Kenya
+KenyaNorth Eastern,North Eastern,32.40%,Kenya
+KenyaEastern,Eastern,63.30%,Kenya
+KenyaCentral,Central,89.70%,Kenya
+KenyaRift Valley,Rift Valley,51.30%,Kenya
+KenyaWestern,Western,47.80%,Kenya
+KenyaNyanza,Nyanza,65.00%,Kenya
+KenyaNairobi,Nairobi,89.10%,Kenya
+UgandaKampala,Kampala,95.50%,Uganda
+UgandaCentral1,Central 1,82.40%,Uganda
+UgandaCentral2,Central 2,77.30%,Uganda
+UgandaBusoga,Busoga,74.70%,Uganda
+UgandaBukedi,Bukedi,67.20%,Uganda
+UgandaBugishu,Bugishu,57.60%,Uganda
+UgandaTeso,Teso,75.30%,Uganda
+UgandaKaramoja,Karamoja,72.50%,Uganda
+UgandaLango,Lango,68.30%,Uganda
+UgandaAcholi,Acholi,80.80%,Uganda
+UgandaWest Nile,West Nile,77.90%,Uganda
+UgandaBunyoro,Bunyoro,57.70%,Uganda
+UgandaTooro,Tooro,75.90%,Uganda
+UgandaAnkole,Ankole,70.80%,Uganda
+UgandaKigezi,Kigezi,70.70%,Uganda
+SomaliaMaroodijeex/Saaxil,Maroodijeex/Saaxil,57.00%,Somalia
+SomaliaAwdal,Awdal,44.50%,Somalia
+SomaliaTogdheer,Togdheer,29.20%,Somalia
+SomaliaSool,Sool,34.70%,Somalia
+SomaliaSanaag,Sanaag,25.40%,Somalia
+SomaliaBari,Bari,42.10%,Somalia
+SomaliaNugal,Nugal,37.20%,Somalia
+SomaliaMudug,Mudug,34.90%,Somalia

@@ -1,0 +1,52 @@
+id,region,residence,country
+EthiopiaTigray,Tigray,0.752796447,Ethiopia
+EthiopiaAfar,Afar,0.726742023,Ethiopia
+EthiopiaAmhara,Amhara,0.806905619,Ethiopia
+EthiopiaOromia,Oromia,0.847634672,Ethiopia
+EthiopiaSomali,Somali,0.811173665,Ethiopia
+EthiopiaBenishangul,Benishangul,0.833931263,Ethiopia
+EthiopiaSNNPR,SNNPR,0.87058755,Ethiopia
+EthiopiaGambela,Gambela,0.53470834,Ethiopia
+EthiopiaHarari,Harari,0.426085481,Ethiopia
+EthiopiaAddis Adaba,Addis Adaba,0,Ethiopia
+EthiopiaDire Dawa,Dire Dawa,0.286490903,Ethiopia
+TanzaniaWestern,Western,0.813949031,Tanzania
+TanzaniaNorthern,Northern,0.60779826,Tanzania
+TanzaniaCentral,Central,0.82031127,Tanzania
+TanzaniaSouthern Highlands,Southern Highlands,0.65197364,Tanzania
+TanzaniaSouthern,Southern,0.748254505,Tanzania
+TanzaniaSouth West Highlands,South West Highlands,0.683257128,Tanzania
+TanzaniaLake,Lake,0.748998598,Tanzania
+TanzaniaEastern,Eastern,0.243580669,Tanzania
+TanzaniaZanzibar,Zanzibar,0.662997913,Tanzania
+KenyaCoast,Coast,0.5102459,Kenya
+KenyaNorth Eastern,North Eastern,0.63045045,Kenya
+KenyaEastern,Eastern,0.743257448,Kenya
+KenyaCentral,Central,0.560220091,Kenya
+KenyaRift Valley,Rift Valley,0.68005946,Kenya
+KenyaWestern,Western,0.833134055,Kenya
+KenyaNyanza,Nyanza,0.699770148,Kenya
+KenyaNairobi,Nairobi,0,Kenya
+UgandaKampala,Kampala,0,Uganda
+UgandaCentral1,Central1,0.583985384,Uganda
+UgandaCentral2,Central2,0.710771016,Uganda
+UgandaBusoga,Busoga,0.840766124,Uganda
+UgandaBukedi,Bukedi,0.866548726,Uganda
+UgandaBugishu,Bugishu,0.7760768,Uganda
+UgandaTeso,Teso,0.871409042,Uganda
+UgandaKaramoja,Karamoja,0.796556637,Uganda
+UgandaLango,Lango,0.915690497,Uganda
+UgandaAcholi,Acholi,0.769951488,Uganda
+UgandaWest Nile,West Nile,0.872113469,Uganda
+UgandaBunyoro,Bunyoro,0.820858205,Uganda
+UgandaTooro,Tooro,0.785477286,Uganda
+UgandaAnkole,Ankole,0.722772529,Uganda
+UgandaKigezi,Kigezi,0.833977925,Uganda
+SomaliaMaroodijeex/Saaxil,Maroodijeex/Saaxil,0.262182818,Somalia
+SomaliaAwdal,Awdal,0.449853183,Somalia
+SomaliaTogdheer,Togdheer,0.571731541,Somalia
+SomaliaSool,Sool,0.683642213,Somalia
+SomaliaSanaag,Sanaag,0.775753288,Somalia
+SomaliaBari,Bari,0.349377033,Somalia
+SomaliaNugal,Nugal,0.412108182,Somalia
+SomaliaMudug,Mudug,0.317800615,Somalia
