@@ -25,11 +25,11 @@ library(scales)
 library(grid)
 library(sf)
 
-setwd("G:/My Drive/2019/1- FGM/10- Cross-border Analysis/FGM-Cross-Border/Data")
+setwd("G:/My Drive/2019/1- FGM/10- Cross-border Analysis/FGM-Cross-Border-Analysis/Data")
 results <-read.csv("results.csv") # load subnational prevalence rates for fgm women 15-49
 results.national <- read.csv("fgm_prevalence.csv") # load national prevalence rates for fgm women 15-49
 
-setwd("G:/My Drive/2019/1- FGM/10- Cross-border Analysis/FGM-Cross-Border/Boundaries")
+setwd("G:/My Drive/2019/1- FGM/10- Cross-border Analysis/Boundaries")
 geo <- readOGR(".", "Export_Output") # load global shapefile for  DHS data
 
 subset <- geo[(geo@data$CNTRYNAMEE=="Benin" & geo@data$SVYYEAR == 2012) |
