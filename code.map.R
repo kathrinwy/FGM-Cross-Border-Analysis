@@ -131,7 +131,7 @@ mapping  <- mapping %>%
 
 mapping$Data <- as.numeric(mapping$Data)
 
-# Only plot eastern Africa
+# Maps
 
 plot1.green.red <- ggplot(data=mapping, mapping = aes(x=long, y=lat, group=group, fill = Data))+
   geom_polygon()+
@@ -140,7 +140,7 @@ plot1.green.red <- ggplot(data=mapping, mapping = aes(x=long, y=lat, group=group
   coord_equal(ylim=c(-12,40), xlim=c(-20,50))+
   scale_fill_gradient(name = "FGM prevalence \n Women 15-49, %", low = "green3", high = "firebrick3",
                       labels = percent) +
-  theme(legend.position = c(0.15,0.2), legend.text = element_text(size = 10), 
+  theme(legend.position = c(0.10,0.2), legend.text = element_text(size = 10), 
         legend.title = element_text(size = 12))+
   guides(fill = guide_colourbar(ticks = FALSE, barwidth = 2, barheight = 8))
 
@@ -186,7 +186,22 @@ plot3.zoom.AF + annotation_custom(grob.eth) +
   annotation_custom(grob.uga) +
   annotation_custom(grob.tan)
 
-# Ethnicities - plot ADMIN1 with majority Somali population 
+
+# Export global map in vector format --------------------------------------
+
+svg("G:/My Drive/2019/1- FGM/05- Country profiles/Map/global.map.svg",width=14,height=7)
+
+plot1.green.red
+
+dev.off()
+
+png("G:/My Drive/2019/1- FGM/05- Country profiles/Map/global.map.png",width=2500,height=1250)
+
+plot1.green.red
+
+dev.off()
+
+# Ethnicities - plot ADMIN1 with majority Somali population  --------------
 
 subset <- geo[(geo@data$CNTRYNAMEE=="Ethiopia" & geo@data$SVYYEAR == 2016),]
 subset <- subset[(subset@data$DHSREGEN == "Somali"),]
