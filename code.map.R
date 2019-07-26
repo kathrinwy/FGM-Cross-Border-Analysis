@@ -1238,6 +1238,80 @@ p2 <- ggplot(data=mapping,mapping = aes(x=long, y=lat, group=group, fill = Data)
 grid.arrange(p1, p2,  nrow=2)
 
 
+# Map Ethiopia for ASRHR supplement ---------------------------------------
+
+setwd("G:/My Drive/2019/1- FGM/11- Ad hoc tasks/ARHR supplement")
+
+results <-read.csv("Ethiopia.csv") # load subnational prevalence rates for fgm women 15-49
+geo <- readOGR(".", "sdr_subnational_boundaries") # load shapefile for  DHS data
+
+subset <- geo
+subset@data$ID <- paste(subset@data$CNTRYNAMEE, subset@data$DHSREGEN, sep="" )
+subset@data$ID2 <- paste(subset@data$CNTRYNAMEE)
+
+#Correct country names
+subset_data <- tidy(subset)%>% #Command takes medium amount of time
+  tbl_df()
+
+#df3 linking data, called geo_data_1
+geo_data_1 <- subset@data%>%
+  tbl_df()%>%
+  rownames_to_column(var="id")%>%
+  dplyr::select(id,ID, ID2)%>%
+  mutate(ID = as.character(ID)) %>%
+  mutate(ID2 = as.character(ID2))
+
+geo_data_1$id <- as.numeric(geo_data_1$id)-1
+
+geo_data_1$id <- as.character(geo_data_1$id)
+
+data <- results %>%
+  dplyr::select(c("ID", "data", "year"))
+
+data_match <- data %>%
+  tbl_df()
+
+colnames(data_match) <- c("ID", "Data", "Year") 
+
+data_match <- left_join(data_match, geo_data_1,by=c("ID"="ID"))
+
+data_match <- data_match %>%
+  group_by(id)
+
+#Second link (new) df2(data_match) and df4
+
+mapping <- left_join(subset_data,data_match)
+b <- as.data.frame(unique(mapping$ID))
+a <- as.data.frame(subset@data$ID)
+
+mapping$Data <- as.numeric(mapping$Data)
+
+mapping$Fill <- ifelse(mapping$Data < 0.1, "less than 10%", 
+                       ifelse(0.1 <= mapping$Data & mapping$Data < 0.2, "between 10% and 20%",
+                              ifelse(0.2 <= mapping$Data & mapping$Data < 0.3, "between 20% and 30%",
+                                     ifelse(0.3 <= mapping$Data & mapping$Data < 0.4, "between 30% and 40%",
+                                            ifelse(0.4 <= mapping$Data & mapping$Data < 0.5, "between 40% and 50%",
+                                                   ifelse(0.5 <= mapping$Data & mapping$Data < 0.6, "between 50% and 60%",
+                                                          ifelse(0.6 <= mapping$Data & mapping$Data < 0.7, "between 60% and 70%",
+                                                                 ifelse(0.7 <= mapping$Data & mapping$Data < 0.8, "between 70% and 80%",
+                                                                        ifelse(0.8 <= mapping$Data & mapping$Data < 0.9, "between 80% and 90%",
+                                                                               ifelse(0.9 <= mapping$Data & mapping$Data < 1, "between 20% and 40%",NA))))))))))
+                                                                                 
 
 
 
+# Maps
+
+
+setwd("G:/My Drive/2019/1- FGM/11- Ad hoc tasks/ARHR supplement")
+
+plot <- plot1.green.red <- ggplot(data=mapping, mapping = aes(x=long, y=lat, group=group, fill = Data))+
+  geom_polygon()+
+  theme_void()+
+  coord_equal()+
+  facet_wrap( Year ~.)+
+  scale_fill_gradient(name = "FGM prevalence \n Women 15-49, %", low = "green3", high = "firebrick3",
+                      labels = percent,  limits= c(0.20,1)) +
+  guides(fill = guide_colourbar(ticks = FALSE, barwidth = 2, barheight = 8))
+
+ggsave(file = paste("Ethiopia.jpg"), print(plot))
