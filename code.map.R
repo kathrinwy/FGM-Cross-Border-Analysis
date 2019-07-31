@@ -137,7 +137,7 @@ plot1.green.red <- ggplot(data=mapping, mapping = aes(x=long, y=lat, group=group
   geom_polygon()+
   theme_void()+
   borders("world", col = "gray27", lwd = 0.5)+
-  coord_equal(ylim=c(-12,40), xlim=c(-20,50))+
+  #coord_equal(ylim=c(-12,40), xlim=c(-20,50))+
   scale_fill_gradient(name = "FGM prevalence \n Women 15-49, %", low = "green3", high = "firebrick3",
                       labels = percent) +
   theme(legend.position = c(0.10,0.2), legend.text = element_text(size = 10), 
@@ -159,7 +159,7 @@ plot3.zoom.East.Africa   <- ggplot(data=mapping,
   geom_polygon()+
   theme_void()+
   borders("world", col = "gray27", lwd = 0.5)+
-  scale_fill_gradient(name = "FGM prevalence \n Women 15-49, %", high="red", low="green") +
+  scale_fill_gradient(name = "FGM prevalence \n Women 15-49, %", high="firebrick3", low="green3") +
   coord_equal(ylim=c(-12,15), xlim=c(25,57))+
   theme(legend.position = c(0.85,0.35), legend.text = element_text(size = 14), 
         legend.title = element_text(size = 16))+
@@ -179,12 +179,14 @@ grob.uga <- grobTree(textGrob("Uganda", x=0.225,  y=0.5, hjust=0,
 grob.tan <- grobTree(textGrob("Tanzania", x=0.27,  y=0.3, hjust=0,
                               gp=gpar(col="black", fontsize=13, fontface="italic")))
 
-plot3.zoom.AF + annotation_custom(grob.eth) +
+Zoom.East.Africa <- plot3.zoom.East.Africa + annotation_custom(grob.eth) +
   annotation_custom(grob.som) +
   annotation_custom(grob.sne) +
   annotation_custom(grob.ken) +
   annotation_custom(grob.uga) +
   annotation_custom(grob.tan)
+
+
 
 
 # Export global map in vector format --------------------------------------
@@ -200,6 +202,14 @@ png("G:/My Drive/2019/1- FGM/05- Country profiles/Map/global.map.png",width=2500
 plot1.green.red
 
 dev.off()
+
+svg("G:/My Drive/2019/1- FGM/05- Country profiles/Map/Zoom.East.Africa.svg",width=14,height=7)
+
+Zoom.East.Africa
+
+dev.off()
+
+
 
 # Ethnicities - plot ADMIN1 with majority Somali population  --------------
 
