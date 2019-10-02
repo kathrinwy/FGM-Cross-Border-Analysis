@@ -24,6 +24,7 @@ library(ggrepel)
 library(scales)
 library(grid)
 library(sf)
+library(openxlsx)
 
 setwd("G:/My Drive/2019/1- FGM/10- Cross-border Analysis/FGM-Cross-Border-Analysis/Data")
 results <-read.csv("results.csv") # load subnational prevalence rates for fgm women 15-49
@@ -1315,13 +1316,81 @@ mapping$Fill <- ifelse(mapping$Data < 0.1, "less than 10%",
 
 setwd("G:/My Drive/2019/1- FGM/11- Ad hoc tasks/ARHR supplement")
 
-plot <- plot1.green.red <- ggplot(data=mapping, mapping = aes(x=long, y=lat, group=group, fill = Data))+
+plot <- ggplot(data=mapping, mapping = aes(x=long, y=lat, group=group, fill = Data))+
   geom_polygon()+
   theme_void()+
   coord_equal()+
   facet_wrap( Year ~.)+
-  scale_fill_gradient(name = "FGM prevalence \n Women 15-49, %", low = "green3", high = "firebrick3",
-                      labels = percent,  limits= c(0.20,1)) +
+  scale_fill_gradient(name = "FGM prevalence \n Women 15-19, %", low = "green3", high = "firebrick3",
+                      labels = scales::percent_format(accuracy = 1L),  limits= c(0.20,1)) +
   guides(fill = guide_colourbar(ticks = FALSE, barwidth = 2, barheight = 8))
 
 ggsave(file = paste("Ethiopia.jpg"), print(plot))
+
+
+# Map Nairobi -------------------------------------------------------------
+
+setwd("G:/My Drive/2019/15- GlobalShapefiles")
+geo <- readOGR(".", "BNDA50")
+
+#Correct country names
+geo@data$ROMNAM <- as.character(geo@data$ROMNAM)
+geo<- geo[!is.na(geo@data$ROMNAM) ,]
+geo[geo@data$ROMNAM == "CÃ´te d'Ivoire", "ROMNAM"] <- "Cote d`Ivoire"
+geo[geo@data$ROMNAM == "United Kingdom of Great Britain and Northern Ireland", "ROMNAM"] <- "United Kingdom"
+
+geo_data <- tidy(geo)%>% #Command takes medium amount of time
+  tbl_df()
+
+a <- as.data.frame(geo@data$ROMNAM)
+
+#df3 linking data, called geo_data_1
+geo_data_1 <- geo@data%>%
+  tbl_df()%>%
+  rownames_to_column(var="id")%>%
+  dplyr::select(id,ROMNAM)%>%
+  mutate(ROMNAM = as.character(ROMNAM))
+
+geo_data_1$id <- as.numeric(geo_data_1$id)-1
+
+geo_data_1$id <- as.character(geo_data_1$id)
+
+# Read in data
+setwd("G:/My Drive/2019/14- Nairobi/Harmful practice session")
+
+data <-read.xlsx("data_FGM.xlsx", sheet = 1)
+
+data_match <- data%>%
+  tbl_df()
+
+colnames(data_match) <- c("ROMNAM","Data")
+
+#First link df2 (data of interest) and df3 (linking data)
+data_match <- left_join(data_match, geo_data_1,by="ROMNAM")
+
+data_match <- data_match %>%
+  group_by(id)
+
+#Second link (new) df2(data_match) and df4
+
+mapping <- left_join(geo_data,data_match)
+
+#mapping$Data <- as.numeric(mapping$Data)
+
+png("data.availability.png",width=2500,height=1250)
+
+ggplot(data=mapping,
+       mapping = aes(x=long, y=lat, group=group, fill=Data))+
+  geom_polygon()+
+  coord_equal(ylim = c(-55,80), xlim = c(-150, 150))+
+  scale_fill_manual(values=c("gold1", "dodgerblue1", "firebrick3"), na.value = "lightcyan")+
+  theme_void()+
+  theme(legend.position = "bottom", legend.text=element_text(size=40), 
+        legend.background = element_rect(fill = "lightgoldenrodyellow", 
+                            size =1.5, linetype = "solid", 
+                            color = "black"),
+        legend.key.size = unit(4,"line"),
+        plot.background = element_rect(fill = "darkblue"))+
+  labs(fill = " ")
+
+dev.off()

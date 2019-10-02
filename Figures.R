@@ -263,12 +263,12 @@ survival.curve <- survfit(Surv(as.numeric(time), as.numeric(fgm)==1) ~ country,
 survplot <- ggsurvplot(survival.curve, xlab = "Age", ylab = "Probability of not experiencing FGM",
                        censor = F, data, conf.int = F, palette = "Dark2",
                        font.title=c(24, "bold", "brown"),
-                       xlim=c(0,20),   legend.labs = c("Ethiopia", "Kenya", "Somalia NE Zone", "Somaliland"))$plot  +
+                       xlim=c(0,20),   
+                       legend.labs = c("Ethiopia (DHS 2016)", "Kenya (DHS 2014)", 
+                                       "Somalia NE Zone (MICS 2011)", "Somaliland (MICS 2011)"))$plot  +
   scale_x_continuous(breaks = seq(0, 20, 1))+
   
-  labs(title = "Somali etchnicty across Ethiopia, Kenya and Somalia", 
-       subtitle = "Source: Kenya DHS 2014, Ethiopia DHS 2016, Somaliland MICS 2011, Somalia Northeastern Zone MICS 2011",
-       color = "Country")+
+  labs(title = "Somali etchnicty across Ethiopia, Kenya and Somalia", color = "Country")+
   
   theme(legend.position = c(0.8, 0.4) , plot.subtitle = element_text(size = 8), plot.title = element_text(size=16),
         legend.title =element_text(face="bold")) 
