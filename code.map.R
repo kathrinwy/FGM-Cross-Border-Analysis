@@ -3,6 +3,7 @@
 # last update 30 May  2019
 
 # load necessary libraries
+library(stringr)
 library(tmap)
 library(rgeos)
 library(ggmap)
@@ -25,6 +26,7 @@ library(scales)
 library(grid)
 library(sf)
 library(openxlsx)
+
 
 setwd("G:/My Drive/2019/1- FGM/10- Cross-border Analysis/FGM-Cross-Border-Analysis/Data")
 results <-read.csv("results.csv") # load subnational prevalence rates for fgm women 15-49
@@ -138,7 +140,7 @@ plot1.green.red <- ggplot(data=mapping_subnational, mapping = aes(x=long, y=lat,
   geom_polygon()+
   theme_void()+
   borders("world", col = "gray27", lwd = 0.5)+
-  coord_equal(ylim = c(-55,80), xlim = c(-150, 150))+
+  coord_equal(ylim = c(-55,80), xlim = c(-150, 165))+
   scale_fill_gradient(name = "FGM prevalence \n Women 15-49, %", low = "green3", high = "firebrick3",
                       labels = percent) +
   theme(legend.position = c(0.10,0.2), legend.text = element_text(size = 10), 
@@ -146,7 +148,32 @@ plot1.green.red <- ggplot(data=mapping_subnational, mapping = aes(x=long, y=lat,
   guides(fill = guide_colourbar(ticks = FALSE, barwidth = 2, barheight = 8))
 
 
-plot2.blues     <- ggplot(data=mapping_subnational, mapping = aes(x=long, y=lat, group=group, fill = Data))+
+world_map <- map_data("world")
+
+# Map 2
+plot1 <- ggplot()+
+  geom_polygon(world_map, mapping = aes(x = long, y = lat, group = group), fill="azure3")+
+  coord_equal(ylim = c(-55,80), xlim = c(-150, 165))+
+  theme_void()+
+  labs(fill = " ")
+
+plot2.yellow.red <- plot1+
+  geom_polygon(data=mapping_subnational, mapping = aes(x=long, y=lat, group=group, fill = Data))+
+  scale_fill_gradient(name = "FGM prevalence \n Women 15-49, %", low = "yellow", high = "red",
+                      labels = percent, na.value = "azure3") +
+  borders("world", col = "white", lwd = 0.5)+
+  theme(legend.position = c(0.15,0.2), plot.background = element_rect(fill = "slategray1"))
+
+plot2.yellow.red.no.legend <- plot1+
+  geom_polygon(data=mapping_subnational, mapping = aes(x=long, y=lat, group=group, fill = Data))+
+  scale_fill_gradient(name = "FGM prevalence \n Women 15-49, %", low = "yellow", high = "red",
+                      labels = percent, na.value = "azure3") +
+  borders("world", col = "white", lwd = 0.5)+
+  theme(legend.position = "none", plot.background = element_rect(fill = "slategray1"))
+
+
+# Map 3
+plot3.blues     <- ggplot(data=mapping_subnational, mapping = aes(x=long, y=lat, group=group, fill = Data))+
   geom_polygon()+
   theme_void()+
   borders("world", col = "gray27", lwd = 0.5)+
@@ -163,23 +190,22 @@ plot3.zoom.East.Africa   <- ggplot(data=mapping_subnational,
   borders("world", col = "gray27", lwd = 1.5)+
   scale_fill_gradient(name = "FGM prevalence \n Women 15-49, %", high="red", low="yellow") +
   coord_equal(ylim=c(-12,15), xlim=c(25,57))+
-  theme(legend.position = c(0.85,0.35), legend.text = element_text(size = 14), 
-        legend.title = element_text(size = 16))+
+  theme(legend.position = "none")+
   guides(fill = guide_colourbar(ticks = FALSE, barwidth = 2, barheight = 12))
 
 # Create country labels
 grob.eth <- grobTree(textGrob("Ethiopia", x=0.4,  y=0.85, hjust=0,
-                              gp=gpar(col="black", fontsize=40, fontface="italic")))
+                              gp=gpar(col="black", fontsize=20, fontface="italic")))
 grob.som <- grobTree(textGrob("Somaliland", x=0.58,  y=0.78, hjust=0,
-                              gp=gpar(col="black", fontsize=40, fontface="italic")))
+                              gp=gpar(col="black", fontsize=20, fontface="italic")))
 grob.sne <- grobTree(textGrob("Somalia \n Northeast Zone", x=0.8,  y=0.78, hjust=0,
-                              gp=gpar(col="black", fontsize=40, fontface="italic")))
+                              gp=gpar(col="black", fontsize=20, fontface="italic")))
 grob.ken <- grobTree(textGrob("Kenya", x=0.376,  y=0.525, hjust=0,
-                              gp=gpar(col="black", fontsize=40, fontface="italic")))
+                              gp=gpar(col="black", fontsize=20, fontface="italic")))
 grob.uga <- grobTree(textGrob("Uganda", x=0.225,  y=0.5, hjust=0,
-                              gp=gpar(col="black", fontsize=40, fontface="italic")))
+                              gp=gpar(col="black", fontsize=20, fontface="italic")))
 grob.tan <- grobTree(textGrob("Tanzania", x=0.27,  y=0.3, hjust=0,
-                              gp=gpar(col="black", fontsize=40, fontface="italic")))
+                              gp=gpar(col="black", fontsize=20, fontface="italic")))
 
 Zoom.East.Africa <- plot3.zoom.East.Africa + annotation_custom(grob.eth) +
   annotation_custom(grob.som) +
@@ -187,9 +213,6 @@ Zoom.East.Africa <- plot3.zoom.East.Africa + annotation_custom(grob.eth) +
   annotation_custom(grob.ken) +
   annotation_custom(grob.uga) +
   annotation_custom(grob.tan)
-
-
-
 
 # Export global map in vector format --------------------------------------
 
@@ -199,25 +222,39 @@ plot1.green.red
 
 dev.off()
 
-png("G:/My Drive/2019/1- FGM/05- Country profiles/Map/global.map.png",width=2500,height=1250)
+png("G:/My Drive/2019/1- FGM/05- Country profiles/Map/global.map.png", width = 16, height = 16, units = 'in', res = 600)
 
 plot1.green.red
 
 dev.off()
 
-svg("G:/My Drive/2019/1- FGM/05- Country profiles/Map/Zoom.East.Africa.svg",width=14,height=7)
+png("G:/My Drive/2019/1- FGM/14- Map depository/1- Subnational map/subnational.map.with.legend.png", width = 16, height = 16, units = 'in', res = 600)
+
+plot2.yellow.red 
+
+dev.off()
+
+png("G:/My Drive/2019/1- FGM/14- Map depository/1- Subnational map/subnational.map.png", 
+    width = 16, height = 16, units = 'in', res = 600)
+
+plot2.yellow.red.no.legend 
+
+dev.off()
+
+svg("G:/My Drive/2019/1- FGM/05- Country profiles/Map/Zoom.East.Africa.svg", width = 10, height = 9, units = 'in', res = 600)
 
 Zoom.East.Africa
 
 dev.off()
 
-png("ZoomEastAfrica.png",width=2500,height=1250)
+png("G:/My Drive/2019/1- FGM/14- Map depository/1- Subnational map/subnational.mapEastAfrica.png", 
+    width = 10, height = 9, units = 'in', res = 600)
 
 Zoom.East.Africa
 
 dev.off()
 
-jpeg("Plot3.jpeg", width = 22, height = 22, units = 'in', res = 900)
+jpeg("Plot3.jpeg",   width = 10, height = 9, units = 'in', res = 600)
 
 Zoom.East.Africa
 
@@ -1342,19 +1379,28 @@ ggsave(file = paste("Ethiopia.jpg"), print(plot))
 
 # Map Nairobi -------------------------------------------------------------
 
-setwd("G:/My Drive/2019/15- GlobalShapefiles")
-geo <- readOGR(".", "BNDA50")
+setwd("G:/My Drive/2019/15- GlobalShapefiles/2018/UNmap_25")
+geo <- readOGR(".", "BNDA25_CTY")
+
+subset <- geo[(geo@data$ROMNAM=="Jammu and Kashmir"),]
+
+subset2 <- geo[(geo@data$ROMNAM=="China"),]
 
 #Correct country names
 geo@data$ROMNAM <- as.character(geo@data$ROMNAM)
 geo<- geo[!is.na(geo@data$ROMNAM) ,]
 geo[geo@data$ROMNAM == "CÃ´te d'Ivoire", "ROMNAM"] <- "Cote d`Ivoire"
 geo[geo@data$ROMNAM == "United Kingdom of Great Britain and Northern Ireland", "ROMNAM"] <- "United Kingdom"
+names <- as.data.frame(unique(geo@data$ROMNAM))
 
 geo_data <- tidy(geo)%>% #Command takes medium amount of time
   tbl_df()
 
-a <- as.data.frame(geo@data$ROMNAM)
+subset_data <- tidy(subset) %>%
+  tbl_df()
+
+subset_data2 <- tidy(subset2) %>%
+  tbl_df()
 
 #df3 linking data, called geo_data_1
 geo_data_1 <- geo@data%>%
@@ -1366,6 +1412,27 @@ geo_data_1 <- geo@data%>%
 geo_data_1$id <- as.numeric(geo_data_1$id)-1
 
 geo_data_1$id <- as.character(geo_data_1$id)
+
+subset_data_1 <- subset@data%>%
+  tbl_df()%>%
+  rownames_to_column(var="id")%>%
+  dplyr::select(id,ROMNAM)%>%
+  mutate(ROMNAM = as.character(ROMNAM))
+
+subset_data_1$id <- as.numeric(subset_data_1$id)-1
+
+subset_data_1$id <- as.character(subset_data_1$id)
+
+subset_data_12 <- subset2@data%>%
+  tbl_df()%>%
+  rownames_to_column(var="id")%>%
+  dplyr::select(id,ROMNAM)%>%
+  mutate(ROMNAM = as.character(ROMNAM))
+
+subset_data_12$id <- as.numeric(subset_data_12$id)-1
+
+subset_data_12$id <- as.character(subset_data_12$id)
+
 
 # Read in data
 setwd("G:/My Drive/2019/14- Nairobi/Harmful practice session")
@@ -1379,90 +1446,115 @@ colnames(data_match) <- c("ROMNAM","Data")
 
 #First link df2 (data of interest) and df3 (linking data)
 data_match <- left_join(data_match, geo_data_1,by="ROMNAM")
+#data_match2 <- left_join(data_match, subset_data_1,by="ROMNAM") 
+#data_match2 <- data_match2[1:3]
+#names(data_match2) <- c("ROMNAM", "Data", "id")
+#data_match3 <- left_join(data_match, subset_data_12,by="ROMNAM") 
+#data_match3 <- data_match3[1:3]
+#names(data_match3) <- c("ROMNAM", "Data", "id")
+
 
 data_match <- data_match %>%
   group_by(id)
 
+#data_match2 <- data_match2 %>%
+#  group_by(id)
+
+#data_match3 <- data_match3 %>%
+#  group_by(id)
+
 #Second link (new) df2(data_match) and df4
 
 mapping <- left_join(geo_data,data_match)
+mapping2 <- left_join(subset_data,data_match2)
+mapping3 <- left_join(subset_data2 ,data_match)
 
-mapping$Data <- as.factor(mapping$Data)
-
-unique(mapping$Data)
-
-mapping$Data <- factor(mapping$Data,levels = c("FGM has been reported", "less than 10%", 
+mapping$Data <- factor(mapping$Data, levels =c("FGM has been reported, no survey*", 
+                                               "less than 10%", 
                                                "between 10% and 20%", "between 20% and 30%",
                                                "between 30% and 40%", "between 40% and 50%", 
                                                "between 60% and 70%", "between 70% and 80%", 
                                                "between 80% and 90%", "above 90%")) 
 
-setwd("G:/My Drive/2019/14- Nairobi/Harmful practice session")
-
 colfunc <- colorRampPalette(c("yellow", "red"))
 
-jpeg("data.availability2.jpeg", width = 16, height = 16, units = 'in', res = 1050)
+png("G:/My Drive/2019/1- FGM/14- Map depository/3- FGM reported/FGMreported.with.legend2.png", 
+    width = 25, height = 10, units = 'in', res = 900)
+
+map1 <- ggplot()+
+  geom_polygon(data=mapping, mapping = aes(x=long, y=lat, group=group, fill=Data), 
+               color = "white", lwd = 0.5)+
+  coord_equal(ylim = c(-55,80), xlim = c(-150, 165))+
+  scale_fill_manual(values=c("deepskyblue1", colfunc(9)), na.value = "azure3")+
+  theme_void()+
+  theme(legend.position = c(0.12,0.3), legend.text = element_text(size = 16),legend.key.size = unit(1, "cm"),
+        plot.background = element_rect(fill = "slategray1"))+
+  labs(fill = " ")
+
+map1 + geom_polygon(data=mapping2,mapping = aes(x=long, y=lat), 
+                            color = "azure3", linetype = "dashed", fill=NA, lwd = 0.5)
+
+
+dev.off()
+
+png("G:/My Drive/2019/1- FGM/14- Map depository/3- FGM reported/FGMreported.png", width = 12, height = 7, units = 'in', res = 600)
 
 ggplot()+
   geom_polygon(data=mapping, mapping = aes(x=long, y=lat, group=group, fill=Data))+
-  coord_equal(ylim = c(-55,80), xlim = c(-150, 150))+
-  scale_fill_manual(values=c("darkmagenta", colfunc(9)), na.value = "gray40")+
-  #borders("world", col = "white", lwd = 0.5)+
+  coord_equal(ylim = c(-55,80), xlim = c(-150, 165))+
+  scale_fill_manual(values=c("deepskyblue1", colfunc(9)), na.value = "azure3")+
+  borders("world", col = "white", lwd = 0.5)+
   theme_void()+
   theme(legend.position = "none",
-        plot.background = element_rect(fill = "white"))+
+        plot.background = element_rect(fill = "slategray1"))+
   labs(fill = " ")
+
 dev.off()
 
-
 # map for Data Signature session
-setwd("G:/My Drive/2019/14- Nairobi")
 
-mapping2 <- na_if(mapping, "FGM has been reported")
+mapping2 <- na_if(mapping, "FGM has been reported but no household survey available")
 
-jpeg("data.availability3.jpeg", width = 16, height = 16, units = 'in', res = 1050)
+png("G:/My Drive/2019/1- FGM/14- Map depository/2- National map/national.map.with.legend.png", 
+    width = 12, height = 7, units = 'in', res = 600)
 
 ggplot()+
   geom_polygon(data=mapping2, mapping = aes(x=long, y=lat, group=group, fill=Data))+
-  coord_equal(ylim = c(-55,80), xlim = c(-150, 150))+
-  scale_fill_manual(values=c(colfunc(9)), na.value = "gray40")+
+  coord_equal(ylim = c(-55,80), xlim = c(-150, 165))+
+  scale_fill_manual(values=c(colfunc(9)), na.value = "azure3")+
+  borders("world", col = "white", lwd = 0.5)+
+  theme_void()+
+  theme(legend.position = c(0.10,0.2),
+        plot.background = element_rect(fill = "slategray1"))+
+  
+  labs(fill = " ")
+dev.off()
+
+png("G:/My Drive/2019/1- FGM/14- Map depository/2- National map/national.map.png", width = 12, height = 7, units = 'in', res = 600)
+
+ggplot()+
+  geom_polygon(data=mapping2, mapping = aes(x=long, y=lat, group=group, fill=Data))+
+  coord_equal(ylim = c(-55,80), xlim = c(-150, 165))+
+  scale_fill_manual(values=c(colfunc(9)), na.value = "azure3")+
+  borders("world", col = "white", lwd = 0.5)+
+  theme_void()+
+  theme(legend.position = "none",
+        plot.background = element_rect(fill = "slategray1"))+
+  labs(fill = " ")
+
+dev.off()
+
+png("G:/My Drive/2019/1- FGM/14- Map depository/2- National map/national.map.simple.png", width = 12, height = 7, units = 'in', res = 600)
+
+ggplot()+
+  geom_polygon(data=mapping2, mapping = aes(x=long, y=lat, group=group, fill=Data))+
+  coord_equal(ylim = c(-55,80), xlim = c(-150, 165))+
+  scale_fill_manual(values=c(colfunc(9)), na.value = "azure3")+
   #borders("world", col = "white", lwd = 0.5)+
   theme_void()+
   theme(legend.position = "none",
         plot.background = element_rect(fill = "white"))+
   labs(fill = " ")
-dev.off()
-
-
-
-# Subnational map
-
-world_map <- map_data("world")
-
-plot1 <- ggplot()+
-  geom_polygon(world_map, mapping = aes(x = long, y = lat, group = group), fill="white")+
-  coord_equal(ylim = c(-55,80), xlim = c(-150, 150))+
-  theme_void()+
-  theme(        plot.background = element_rect(fill = "deepskyblue"))+
-  labs(fill = " ")
-
-plot1 <- ggplot()+
-  geom_polygon(data=mapping, mapping = aes(x=long, y=lat, group=group, fill=Data))+
-  coord_equal(ylim = c(-55,80), xlim = c(-150, 150))+
-  scale_fill_manual(values=c("white", "darkmagenta", "firebrick3"), na.value = "lightcyan")+
-  theme_void()+
-  theme(plot.background = element_rect(fill = "deepskyblue"), legend.position = "none")+
-  labs(fill = " ")
-
-jpeg("kenya.jpeg", width = 22, height = 22, units = 'in', res = 1050)
-
-plot1+
-
-  geom_polygon(data=mapping_subnational, mapping = aes(x=long, y=lat, group=group, fill = Data), show_guide=FALSE)+
-  scale_fill_gradient(name = "FGM prevalence \n Women 15-49, %", low = "green3", high = "firebrick3",
-                      labels = percent, na.value = "lightcyan") +
-  borders("world", col = "white", lwd = 0.5)
-
 
 dev.off()
 
@@ -1537,7 +1629,7 @@ mapping$Fill = factor(mapping$Fill,levels(mapping$Fill)[c(6,1,2,3,4,5)])
 
 # Maps
 
-jpeg("kenya.jpeg", width = 22, height = 22, units = 'in', res = 1050)
+png("G:/My Drive/2019/1- FGM/14- Map depository/1- Subnational map/kenya.png", width = 10, height = 5, units = 'in', res = 600)
 
 ggplot(data=mapping, mapping = aes(x=long, y=lat, group=group, fill = Fill))+
   geom_polygon()+
