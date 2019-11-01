@@ -147,10 +147,35 @@ plot1.green.red <- ggplot(data=mapping_subnational, mapping = aes(x=long, y=lat,
         legend.title = element_text(size = 12))+
   guides(fill = guide_colourbar(ticks = FALSE, barwidth = 2, barheight = 8))
 
+plot1a <- ggplot(data=mapping_subnational, mapping = aes(x=long, y=lat, group=group, fill = Data))+
+  geom_polygon()+
+  theme_void()+
+  borders("world", col = "gray27", lwd = 0.5)+
+  coord_equal(ylim = c(-55,80), xlim = c(-150, 165))+
+  scale_fill_gradient(name = "FGM prevalence \n Women 15-49, %", low = "yellow", high = "red",
+                      labels = percent) +
+  theme(legend.position = c(0.10,0.2), legend.text = element_text(size = 10), 
+        legend.title = element_text(size = 12))+
+  guides(fill = guide_colourbar(ticks = FALSE, barwidth = 2, barheight = 8))
+
+plot1b <- ggplot(data=mapping_subnational, mapping = aes(x=long, y=lat, group=group, fill = Data))+
+  geom_polygon()+
+  theme_void()+
+  borders("world", col = "gray27", lwd = 0.5)+
+  coord_equal(ylim = c(-55,80), xlim = c(-150, 165))+
+  scale_fill_gradient(name = "FGM prevalence \n Women 15-49, %", low = "burlywood1", high = "brown4",
+                      labels = percent) +
+  theme(legend.position = c(0.10,0.2), legend.text = element_text(size = 10), 
+        legend.title = element_text(size = 12))+
+  guides(fill = guide_colourbar(ticks = FALSE, barwidth = 2, barheight = 8))
+
+
+
+
+# Map 2
 
 world_map <- map_data("world")
 
-# Map 2
 plot1 <- ggplot()+
   geom_polygon(world_map, mapping = aes(x = long, y = lat, group = group), fill="azure3")+
   coord_equal(ylim = c(-55,80), xlim = c(-150, 165))+
@@ -216,13 +241,25 @@ Zoom.East.Africa <- plot3.zoom.East.Africa + annotation_custom(grob.eth) +
 
 # Export global map in vector format --------------------------------------
 
-svg("G:/My Drive/2019/1- FGM/05- Country profiles/Map/global.map.svg",width=14,height=7)
+svg("G:/My Drive/2019/1- FGM/14- Map depository/1- Subnational map/global.map.red.green.svg",width=14,height=7)
 
 plot1.green.red
 
 dev.off()
 
-png("G:/My Drive/2019/1- FGM/05- Country profiles/Map/global.map.png", width = 16, height = 16, units = 'in', res = 600)
+svg("G:/My Drive/2019/1- FGM/14- Map depository/1- Subnational map/global.map.yellow.red.svg",width=14,height=7)
+
+plot1a
+
+dev.off()
+
+svg("G:/My Drive/2019/1- FGM/14- Map depository/1- Subnational map/global.map.brown.blue.svg",width=14,height=7)
+
+plot1b
+
+dev.off()
+
+png("G:/My Drive/2019/1- FGM/14- Map depository/1- Subnational map/global.map.png", width = 16, height = 16, units = 'in', res = 600)
 
 plot1.green.red
 

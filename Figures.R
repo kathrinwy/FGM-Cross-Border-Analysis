@@ -81,7 +81,7 @@ data.latest <- survival_data %>%
 list.countries <- c("Ethiopia", "Kenya", "Tanzania", "Somalia NE Zone", "Somaliland")
 
 for(i in list.countries){
-  
+  i = "Kenya"
   data <- data.latest %>%
     filter(country == i) %>%
     filter(fgm >0) 
